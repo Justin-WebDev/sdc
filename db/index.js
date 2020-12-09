@@ -4,7 +4,7 @@ exports.pool = new Pool({
   user: '',
   host: '54.234.10.123',
   database: 'root',
-  password: '',
+  password: 'password',
   port: 5432,
 });
 
