@@ -4,7 +4,7 @@ const path = require('path');
 const cors = require('cors');
 const db = require('./db');
 const router = require('./routes');
-const morgan = require('morgan'); //
+const morgan = require('morgan');
 
 const app = express();
 module.exports.app = app;

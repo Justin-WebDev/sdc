@@ -2,8 +2,8 @@ const { Pool, Client } = require('pg');
 
 exports.pool = new Pool({
   user: '',
-  host: 'localhost',
-  database: 'qa',
+  host: '54.234.10.123',
+  database: 'root',
   password: '',
   port: 5432,
 });
