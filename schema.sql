@@ -1,20 +1,18 @@
 -- DROP SCHEMA if exists qa;
 -- CREATE SCHEMA qa;
+drop table if exists answers cascade;
+drop table if exists questions cascade;
+drop table if exists photos cascade;
 
--- drop table if exists answers cascade;
--- drop table if exists questions cascade;
--- drop table if exists photos cascade;
-
-CREATE table questions (
-  question_id serial primary key,
-  product_id int,
-  question_body varchar,
-  question_date date,
-  asker_name varchar,
-  asker_email varchar,
-  question_helpfulness int,
-  reported boolean,
-  answers varchar
+CREATE TABLE questions (
+	question_id serial PRIMARY KEY,
+	product_id int,
+	question_body varchar,
+	question_date date,
+	asker_name varchar,
+	asker_email varchar,
+	question_helpfulness int,
+	reported boolean
 );
 
 CREATE table answers (
