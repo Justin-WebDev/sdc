@@ -5,7 +5,6 @@ const cors = require('cors');
 const db = require('./db');
 const router = require('./routes');
 const morgan = require('morgan');
-require('stackify-node-apm');
 
 const app = express();
 module.exports.app = app;
