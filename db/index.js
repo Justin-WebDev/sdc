@@ -3,9 +3,9 @@ const connectionInfo = require('../config/postgres');
 
 exports.pool = new Pool(connectionInfo);
 
-exports.pool.connect()
-  .then(() => console.log('CONNECTED TO DB!'))
-  .catch((err) => console.log(err));
+// exports.pool.connect()
+//   .then(() => console.log('CONNECTED TO DB!'))
+//   .catch((err) => console.log(err));
 
 // const client = new Client({
 //   user: '',
