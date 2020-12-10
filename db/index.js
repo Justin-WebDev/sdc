@@ -1,12 +1,7 @@
 const { Pool, Client } = require('pg');
+const connectionInfo = require('../config/postgres');
 
-exports.pool = new Pool({
-  user: '',
-  host: '54.234.10.123',
-  database: 'root',
-  password: 'password',
-  port: 5432,
-});
+exports.pool = new Pool(connectionInfo);
 
 exports.pool.connect()
   .then(() => console.log('CONNECTED TO DB!'))
