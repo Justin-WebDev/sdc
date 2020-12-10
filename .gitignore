@@ -1,0 +1,8 @@
+## Mac OSX ##
+.DS_Store
+
+## NPM ##
+node_modules/
+
+## database connection info ##
+config/postgres.js
