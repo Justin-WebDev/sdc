@@ -5,7 +5,7 @@ module.exports = {
     return db.pool
     .connect()
     .then(client => {
-      client
+      return client
       .query(
         `SELECT
           q.question_id,
