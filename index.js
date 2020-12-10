@@ -19,6 +19,7 @@ app.use('/qa', router);
 app.use(parser.urlencoded({ extended: true }));
 app.use(cors());
 app.use(express.static('./client/dist'));
+
 app.get('/loaderio-8f297cf85de19e5805e706b238aab2bd/', (req, res) => {
   res.status(200).send('loaderio-8f297cf85de19e5805e706b238aab2bd');
 });
