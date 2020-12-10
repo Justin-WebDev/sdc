@@ -4,5 +4,9 @@
 ## NPM ##
 node_modules/
 
-## database connection info ##
+## Compiled files ##
+compiled/
+
+## API keys ##
 config/postgres.js
+compiled/config/postgres.js

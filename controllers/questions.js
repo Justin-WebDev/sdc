@@ -3,7 +3,7 @@ const models = require('../models');
 module.exports = {
   get: (req, res) => {
     models.questions.get(req.query)
-      .then(({ rows }) => res.status(200).send({'product_id': req.query['product_id'], 'results': rows }))
+      .then(({ rows }) => rows.length === 0 ? res.status(500).send('Error Getting Data') : res.status(200).send({'product_id': req.query['product_id'], 'results': rows }))
       .catch(() => res.status(500).send('Error Getting Data'));
   },
 
