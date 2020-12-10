@@ -1,11 +1,11 @@
-const db = require('../db');
+const { pool } = require('../db');
 
 module.exports = {
   get: ({product_id, page = 1, count = 5}) => {
-    return db.pool
-    .connect()
-    .then(client => {
-      return client
+    return pool
+    // .connect()
+    // .then(client => {
+    //   return client
       .query(
         `SELECT
           q.question_id,
@@ -61,16 +61,16 @@ module.exports = {
             ${count}
           OFFSET
             ${(page - 1) * count}
-      `)
-      .then(data => {
-        client.release();
-        return data;
-      })
-    })
+      `);
+      // .then(data => {
+      //   client.release();
+      //   return data;
+      // })
+    // })
   },
 
   post: ({ body, name, email, product_id }, date) => {
-    return db.pool.query(
+    return pool.query(
       `INSERT 
         INTO questions 
           (
@@ -96,7 +96,7 @@ module.exports = {
   },
 
   helpfulness: ({ question_id }) => {
-    return db.pool.query(
+    return pool.query(
       `UPDATE
         questions
       SET
@@ -107,7 +107,7 @@ module.exports = {
   },
 
   report: ({ question_id }) => {
-    return db.pool.query(
+    return pool.query(
       `UPDATE
         questions
       SET

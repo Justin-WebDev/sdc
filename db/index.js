@@ -1,4 +1,4 @@
-const { Pool, Client } = require('pg');
+const { Pool } = require('pg');
 const connectionInfo = require('../config/postgres');
 
 exports.pool = new Pool(connectionInfo);
