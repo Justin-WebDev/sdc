@@ -1,7 +1,7 @@
 const db = require('../db');
 
 module.exports = {
-  get: ({product_id = Math.floor(Math.random() * 1000000), page = 1, count = 5}) => {
+  get: ({product_id, page = 1, count = 5}) => {
     return db.pool.query(
       `SELECT
         q.question_id,
