@@ -7,6 +7,9 @@ node_modules/
 ## Compiled files ##
 compiled/
 
+## database config ##
+config/
+
 ## API keys ##
-config/postgres.js/
+config/postgres.js
 compiled/config/postgres.js/
